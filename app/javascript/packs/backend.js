@@ -13,7 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "scripts/shared"
-import "scripts/frontend"
+import "scripts/backend"
 
 import "styles/shared"
-import "styles/frontend"
+import "styles/backend"
