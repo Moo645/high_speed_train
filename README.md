@@ -21,19 +21,20 @@
 
 4. optional
   4.1 會員系統 （車票綁會員）
-  4.2 ajax 
-  4.3 前端任意框架實作
-  4.4 SPA ..!!?? (會搞死自己XD) 
+  4.2 前端實作 （ajax, 任意框架）
 
 Models 規劃：
 1. Train (has_many :reservations)
 2. Reservation (belong_to :train) (train_id:references)
 
 RESTful API 規劃：
-Endpoints                  | Verb   | Description
-api/v1/trains              | GET    | 查詢所有列車資訊
-api/v1/trains/:tid         | GET    | 查詢特定列車資訊
-api/v1/reservations        | POST   | 新增訂票資訊 
-api/v1/reservations/:rid   | GET    | 查詢該訂票資訊
-api/v1/reservations/:rid   | PUT    | 修改該訂票資訊
-api/v1/reservations/:rid   | DELETE | 刪除該訂票資訊
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+ Endpoints                  | Verb   | Description  
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 
+ api/v1/trains              | GET    | 查詢所有列車資訊 
+ api/v1/trains/:tid         | GET    | 查詢特定列車資訊 
+ api/v1/reservations        | POST   | 新增訂票資訊    
+ api/v1/reservations/:rid   | GET    | 查詢該訂票資訊  
+ api/v1/reservations/:rid   | PUT    | 修改該訂票資訊   
+ api/v1/reservations/:rid   | DELETE | 刪除該訂票資訊
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 
