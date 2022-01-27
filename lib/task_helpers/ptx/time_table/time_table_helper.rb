@@ -77,7 +77,13 @@ class TimeTableData
     train = {
       :train_no => d['GeneralTimetable']['GeneralTrainInfo']['TrainNo'],
       :direction => d['GeneralTimetable']['GeneralTrainInfo']['Direction'],
-      :service_day => d['GeneralTimetable']['ServiceDay'].values
+      :monday => d['GeneralTimetable']['ServiceDay']['Monday'],
+      :tuesday => d['GeneralTimetable']['ServiceDay']['Tuesday'],
+      :wednesday => d['GeneralTimetable']['ServiceDay']['Wednesday'],
+      :thursday => d['GeneralTimetable']['ServiceDay']['Thursday'],
+      :friday => d['GeneralTimetable']['ServiceDay']['Friday'],
+      :saturday => d['GeneralTimetable']['ServiceDay']['Saturday'],
+      :sunday => d['GeneralTimetable']['ServiceDay']['Sunday']
     }
   end
 
