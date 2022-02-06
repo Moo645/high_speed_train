@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :api, :default => {format: :json} do
+    namespace :v1 do 
+      get "/trains" => "trains#trains_info", as: :trains_info 
+      get "/trains/:train_no" => "trains#train_info", as: :train_info
+    end
+
+  end
+
 end
