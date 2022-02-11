@@ -22,21 +22,5 @@ json.available_trains do
       json.departure_time t[:destination_time][:departure_time]
     end
 
-
-    # json.origin_times t[:origin_times]
-    # json.destination_time t[:destination_time]
-
-    # json.origin_times do
-    #     json.arrival_time '...'
-    #     json.departure_time '...'
-    #     # json.stop_times t.stop_times
-    # end
-
-    # json.destination_time do
-    #     json.arrival_time '...'
-    #     json.departure_time '...'
-    # end
-
   end
-#   json.stop_times @available_trains[0].stop_times
 end
