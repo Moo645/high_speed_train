@@ -6,7 +6,6 @@ class TrainsParams
   def perform
     day_week
     direction
-    @params.permit!
     return @params
   end
 
@@ -14,7 +13,9 @@ class TrainsParams
   def day_week
     day = Hash.new
     day[@params[:date].to_date.strftime("%A").downcase!] = 1
-    @params.merge!(day_week: day)
+    # @params.merge!(day_week: day)
+    @params[:day_week] = day
+    @params[:day_week].permit!
   end
 
   def direction
