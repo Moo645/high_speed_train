@@ -1,10 +1,8 @@
-題目：台灣高鐵訂票系統
-
 第三方API:
-高鐵官網：https://www.thsrc.com.tw/
-高鐵API：https://ptx.transportdata.tw/PTX/Service?searchword=%E9%AB%98%E9%90%B5
+> 高鐵官網：https://www.thsrc.com.tw/
+> 高鐵API：https://ptx.transportdata.tw/PTX/Service?searchword=%E9%AB%98%E9%90%B5
 
-練習目標：
+目標：
 1. 串接高鐵提供的API 取得資料 
   1.1 可以將靜態資訊存入資料庫 （車次資訊）
   1.2 可以獲取動態資料, 即時更新於頁面上 （車票剩餘資訊）
@@ -28,13 +26,13 @@ Models 規劃：
 2. Reservation (belong_to :train) (train_id:references)
 
 RESTful API 規劃：
-－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
- Endpoints                  | Verb   | Description  
-－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 
- api/v1/trains              | GET    | 查詢所有列車資訊 
- api/v1/trains/:tid         | GET    | 查詢特定列車資訊 
- api/v1/reservations        | POST   | 新增訂票資訊    
- api/v1/reservations/:rid   | GET    | 查詢該訂票資訊  
- api/v1/reservations/:rid   | PUT    | 修改該訂票資訊   
- api/v1/reservations/:rid   | DELETE | 刪除該訂票資訊
-－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 
+
+| Endpoints                  | Verb   | Description    
+|----------------------------|--------|--------------- 
+| api/v1/trains              | GET    | 查詢所有列車資訊   
+| api/v1/trains/:tid         | GET    | 查詢特定列車資訊   
+| api/v1/reservations        | POST   | 新增訂票資訊     
+| api/v1/reservations/:rid   | GET    | 查詢該訂票資訊   
+| api/v1/reservations/:rid   | PUT    | 修改該訂票資訊   
+| api/v1/reservations/:rid   | DELETE | 刪除該訂票資訊   
+
