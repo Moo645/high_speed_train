@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_012524) do
+ActiveRecord::Schema.define(version: 2022_02_15_083556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reservations", force: :cascade do |t|
+    t.string "reservation_code", null: false
+    t.integer "train_id", null: false
+    t.string "date", null: false
+    t.integer "ori_stop_time_id", null: false
+    t.integer "des_stop_time_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reservation_code"], name: "index_reservations_on_reservation_code", unique: true
+  end
 
   create_table "stations", force: :cascade do |t|
     t.string "station_uid", null: false
@@ -61,6 +72,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_012524) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "reservations", "trains"
   add_foreign_key "stop_times", "stations"
   add_foreign_key "stop_times", "trains"
   add_foreign_key "trains", "versions"
